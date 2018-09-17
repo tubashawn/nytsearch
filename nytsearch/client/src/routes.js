@@ -8,7 +8,6 @@ app.get("/scrape", function (req, res) {
             var summary = $(element).siblings("p.summary").text().trim();
             var author = $(element).siblings("p.byline").text().trim();
             var link = $(element).parent().parent().attr("href");
-            // var imgLink = $(element).find("a").find("img").attr("src");
 
             db.cheeriMonDB.insert({
                     title: title,

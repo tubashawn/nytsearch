@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var NYTSchema = new Schema({
@@ -9,6 +8,11 @@ var NYTSchema = new Schema({
         trim: true,
         required: true
     }, 
+    author: {
+        type: String,
+        trim: true,
+        required: true
+    },
     date: {
         type: Date,
         trim: true,
@@ -21,6 +25,6 @@ var NYTSchema = new Schema({
     }
 });
 
-const NYTSearchSchema = mongoose.model("nytreact", NYTSchema);
+const NYTSearch = mongoose.model("nytreact", NYTSchema);
 
-module.exports = NYTSearchSchema;
+module.exports = NYTSearch;
