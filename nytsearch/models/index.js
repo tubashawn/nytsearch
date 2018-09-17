@@ -1,3 +1,3 @@
 module.exports = {
-    NYTSearch: require("./NYTSearch")
+    nytreact: require("./nytreact")
 };

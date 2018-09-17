@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-var NYTSchema = new Schema({
+const NYTSchema = new Schema({
     // title/date/url
     title: {
         type: String,
@@ -25,6 +25,6 @@ var NYTSchema = new Schema({
     }
 });
 
-const NYTSearch = mongoose.model("nytreact", NYTSchema);
+const nytreact = mongoose.model("nytreact", NYTSchema);
 
-module.exports = NYTSearch;
+module.exports = nytreact;
